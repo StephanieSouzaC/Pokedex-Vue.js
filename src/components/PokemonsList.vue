@@ -1,23 +1,30 @@
 <script setup>
-const pokemon = defineProps(["name"])
+const pokemon = defineProps(["name", "urlBaseSvg"])
+
 </script>
 
 <template>
     <div class="col-4">
-          <div class="card">
-            <p>{{pokemon.name}}</p>
-          </div>
+        <div class="card mb-3 p-2 cardPokemonList">
+            <p class="text-center">{{ pokemon.name }}</p>
+            <img 
+            :src="urlBaseSvg" class="card-img-top" 
+            alt="imagem pokemon"
+            height="82"
+            />
         </div>
-    <!-- <div class="col-sm-12 col-md-6">
-        <div class="card" style="width:18rem;">
-            <PokemonsList />
-            <ul>
-                <li v-for="pokemon in pokemons" :key="pokemon.name">
-                    {{ pokemon.name }}
-                </li>
-            </ul>
-        </div>
-    </div> -->
+    </div>
 </template>
 
-<style></style>
+<style scoped>
+
+.cardPokemonList{
+    background-color: rgb(255, 233, 235);
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.411) 2%, rgba(255, 255, 255, 0.877) 100%);
+    cursor: pointer;
+}
+
+.cardPokemonList img:hover{
+    padding: .2rem;
+}
+</style>

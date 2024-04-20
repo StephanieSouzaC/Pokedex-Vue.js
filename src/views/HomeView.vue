@@ -3,9 +3,10 @@ import { onMounted, reactive, ref, computed } from "vue";
 import PokemonsList from "../components/PokemonsList.vue";
 
 let pokemons = reactive(ref());
+let urlBaseSvg = ref("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/")
 
 onMounted(() => {
-  fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0")
     .then(res => res.json())
     .then(res => pokemons.value = res.results);
 })
@@ -16,7 +17,7 @@ onMounted(() => {
     <div class="conteiner">
       <div class="row m-4 p-2">
         <div class="col-sm-12 col-md-6">
-          <div class="card" style="width: 18rem;">
+          <div class="card">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -27,13 +28,21 @@ onMounted(() => {
 
         </div>
 
-
         <div class="col-sm-12 col-md-6">
           <div class="card">
-            <div class="card_text row">
-
+            <div class="card_body row">
+              <PokemonsList v-for="pokemon in pokemons" :key="pokemon.name" :name="pokemon.name"
+              :urlBaseSvg="urlBaseSvg + pokemon.url.split('/')[6] + '.svg'"
+              />
+            
+              <!-- <ListPokemons 
+              v-for="pokemon in pokemons"
+              :key="pokemon.name"
+              :name="pokemon.name"
+              :urlBaseSvg="urlBaseSvg + pokemon.url.split('/')[6] + '.svg'"
+              /> -->
             </div>
-            <PokemonsList v-for="pokemon in pokemons" :key="pokemon.name" :name="pokemon.name"/>
+            <!-- <PokemonsList v-for="pokemon in pokemons" :key="pokemon.name" :name="pokemon.name"/> -->
             <!-- <ul>
               <li v-for="pokemon in pokemons" :key="pokemon.name">
                 {{ pokemon.name }}
