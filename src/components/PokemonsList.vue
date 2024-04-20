@@ -9,7 +9,7 @@ const pokemon = defineProps(["name", "urlBaseSvg"])
             <p class="text-center">{{ pokemon.name }}</p>
             <img 
             :src="urlBaseSvg" class="card-img-top" 
-            alt="imagem pokemon"
+            alt="imagem Pokemon"
             height="82"
             />
         </div>
@@ -20,7 +20,7 @@ const pokemon = defineProps(["name", "urlBaseSvg"])
 
 .cardPokemonList{
     background-color: rgb(255, 233, 235);
-    background: radial-gradient(circle, rgba(255, 0, 0, 0.411) 2%, rgba(255, 255, 255, 0.877) 100%);
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.432) 2%, rgba(255, 255, 255, 0.877) 100%);
     cursor: pointer;
 }
 
