@@ -1,5 +1,7 @@
 <script setup>
 import {ref} from 'vue'
+import AboutView from './views/AboutView.vue';
+import HomeView from './views/HomeView.vue';
 
 let num = ref(0)
 
@@ -35,7 +37,6 @@ let num = ref(0)
 
   <div class="main">
     <router-view></router-view>
-
   </div>
  
 
