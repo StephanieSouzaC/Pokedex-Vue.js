@@ -51,7 +51,7 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
   </div>
   <div v-else class="card-not-select p-5 w-100 h-75">
     <img src="../assets/images/pokeball.png" class="card-img-top poke-animation p-5" id="pokeball" alt='Who is that pokemon?'>
-    <h5 class="card-title-no-Selected text-center">Who is that pokemon?</h5>
+    <h5 class="card-title-no-Selected text-center">Who is that pokemon?"</h5>
   </div>
 
 
