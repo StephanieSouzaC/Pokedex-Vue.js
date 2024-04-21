@@ -1,5 +1,12 @@
 <script setup>
 const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1", "type2", "weight", "moves", "id","evolution", "evolutionName"]);
+
+// const rotate = document.querySelector('pokeball');
+// rotate.classList.add('animate__animated', 'animate__rotateIn');
+
+// rotate.addEventListener('animationend', () => {
+//   rotate.classList.add('animate__animated', 'animate__rotateIn');
+// });
 </script>
 
 <template>
@@ -8,7 +15,7 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
     <div class="img-card d-flex justify-content-center">
       <img :src="pokemon.image" class="card-img p-5 w-50 h-50" :alt="pokemon.name">
       </div>
-      <h5 class="card-title text-center">{{ pokemon.name || "Who is that pokemon?" }}</h5>
+      <h5 class="card-title text-center">{{ pokemon.name }}</h5>
       <div class="card-Pokemon-selected">
       <hr>
       <div class="row">
@@ -42,9 +49,9 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
       </div>
     </div>
   </div>
-  <div v-else>
-    <img src="../assets/images/pokeball.png" class="card-img-top p-5" alt='Who is that pokemon?'>
-    <h5 class="card-title text-center">{{ pokemon.name || "Who is that pokemon?" }}</h5>
+  <div v-else class="card-not-select p-5 w-100 h-75">
+    <img src="../assets/images/pokeball.png" class="card-img-top poke-animation p-5" id="pokeball" alt='Who is that pokemon?'>
+    <h5 class="card-title-no-Selected text-center">Who is that pokemon?</h5>
   </div>
 
 
@@ -97,5 +104,19 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
 .titleMoves {
   width: 100%;
   padding-bottom: 1rem;
+}
+
+.poke-animation{
+  animation: captured 1s infinite alternate;
+}
+
+@keyframes captured {
+  from {rotate: 0deg;}
+  to {rotate: 30deg;}
+}
+
+.card-title-no-Selected  {
+  font-family: 'Pokemon Solid', sans-serif;
+  font-size: 2.5rem;
 }
 </style>

@@ -8,21 +8,19 @@ let urlBaseSvg = ref("https://raw.githubusercontent.com/PokeAPI/sprites/master/s
 let searchPokemon = ref("");
 let pokemonSelected = reactive(ref());
 let loading = ref(false);
-let urlBaseEvolution = ref("https://pokeapi.co/api/v2/evolution-chain/");
-
 
 onMounted(() => {
   fetch("https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0")
     .then(res => res.json())
     .then(res => pokemons.value = res.results);
-})
+});
 
-// onMounted(() => {
+// getEvolution(() => {
 //   fetch(`https://pokeapi.co/api/v2/evolution-chain/${pokemonSelected.id}`)
 //     .then(res => res.json())
 //     .then(res => pokemonsEvolution.value = res.results);
-// })
-// ;
+// });
+
 
 const pokemonsFilter = computed(()=>{
   if(pokemons.value && searchPokemon.value){
@@ -31,6 +29,14 @@ const pokemonsFilter = computed(()=>{
   }
   return(pokemons.value);
 });
+
+// const pokemonsFilterbyId = computed(()=>{
+//   if(pokemons.value && searchPokemon.value){
+//     return pokemons.value.filter(pokemon=>
+//   pokemon.id.includes(searchPokemon.value))
+//   }
+//   return(pokemons.value);
+// });
 
 const selectPokemon = async (pokemon)=>{
   loading.value = true;
@@ -82,6 +88,12 @@ const selectPokemon = async (pokemon)=>{
                 :urlBaseSvg="urlBaseSvg + pokemon.url.split('/')[6] + '.svg'" 
                 @click="selectPokemon(pokemon)"
                 />
+                
+                <!-- <pokemonsFilterbyId                  v-for="pokemon in pokemonsFilterbyId" :key="pokemon.id" :name="pokemon.id"
+                :urlBaseSvg="urlBaseSvg + pokemon.url.split('/')[6] + '.svg'" 
+                @click="selectPokemon(pokemon)"
+                /> -->
+                
             </div>
           </div>
         </div>
