@@ -5,9 +5,11 @@ import PokemonCard from "../components/PokemonCard.vue";
 
 let pokemons = reactive(ref());
 let urlBaseSvg = ref("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/");
+let urlBaseType = ref("https://pokeapi.co/api/v2/type/")
 let searchPokemon = ref("");
 let pokemonSelected = reactive(ref());
-let loading = ref(false)
+let loading = ref(false);
+let i = 0;
 
 onMounted(() => {
   fetch("https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0")
@@ -41,12 +43,15 @@ const selectPokemon = async (pokemon)=>{
     <div class="conteiner">
       <div class="row m-4 p-2">
         <div class="col-sm-12 col-md-6">
-          <PokemonCard
+          <PokemonCard 
           :name="pokemonSelected?.name"
           :xp="pokemonSelected?.base_experience"
           :height="pokemonSelected?.height"
           :image = "pokemonSelected?.sprites.other.dream_world.front_default"
           :loading="loading"
+          :type1="pokemonSelected?.types[0].type.name"
+          :type2="pokemonSelected?.types[1].type.name"
+          :weight:="pokemonSelected?.weight"
           />
         </div>
 
