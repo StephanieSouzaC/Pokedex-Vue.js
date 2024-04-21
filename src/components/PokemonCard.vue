@@ -1,39 +1,44 @@
 <script setup>
-const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1", "type2", "weight", "moves"]);
-
+const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1", "type2", "weight", "moves", "id","evolution", "evolutionName"]);
 </script>
 
 <template>
   <div class="card CardPokemonSelected" :class="loading ? '' : 'animate__animated animate__flipInY'"
     v-if="pokemon.name">
-    <img :src="pokemon.image" class="card-img-top-loading p-5" :alt="pokemon.name">
-    <div class="card-Pokemon-selected">
+    <div class="img-card d-flex justify-content-center">
+      <img :src="pokemon.image" class="card-img p-5 w-50 h-50" :alt="pokemon.name">
+      </div>
       <h5 class="card-title text-center">{{ pokemon.name || "Who is that pokemon?" }}</h5>
+      <div class="card-Pokemon-selected">
       <hr>
       <div class="row">
         <div class="col">
           <p><strong>Tipo:</strong></p>
           <div>
             <v-card class="type">{{ pokemon.type1 }}</v-card>
-            <v-card class="type"> {{ pokemon.type2 }}</v-card>
+            <v-card class="type" id="type2" v-if="pokemon.type2"> {{ pokemon.type2 }}</v-card>
           </div>
         </div>
-        <section class="col">
-          <strong>Altura : </strong>
-          <span>{{ pokemon.height }}</span>
-          <hr>
-          <strong>Peso: </strong>
-          <span>{{ pokemon.weight }}</span>
-          <hr>
-        <strong>XP: </strong>
-          <span>{{ pokemon.xp }}</span>
-        </section>
-      <div class="moves">
-        <strong class="titleMoves">Movimentos de Ataque: </strong>  
-        <ul class="movesList">
+          <section class="col">
+            <strong>Altura : </strong>
+            <span>{{ pokemon.height }}</span>
+            <hr>
+            <strong>Peso: </strong>
+            <span>{{ pokemon.weight }}</span>
+            <hr>
+          </section>
+          <!-- <section>
+            <strong>Evolução: </strong>
+            <img :src="pokemon.evolutionName">
+            <span>{{ pokemon.evolution}}</span>
+          </section> -->
+
+        <div class="moves">
+          <strong class="titleMoves">Movimentos de Ataque: </strong>
+          <ul class="movesList">
             <li v-for="move in moves" :key="move.move.name">{{ move.move.name }}</li>
           </ul>
-      </div>
+        </div>
       </div>
     </div>
   </div>
@@ -41,15 +46,13 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
     <img src="../assets/images/pokeball.png" class="card-img-top p-5" alt='Who is that pokemon?'>
     <h5 class="card-title text-center">{{ pokemon.name || "Who is that pokemon?" }}</h5>
   </div>
-  
-  
+
+
 </template>
 
 <style>
 .card-Pokemon-selected {
   padding-bottom: 5rem;
-  max-height: 85vh;
-  /* overflow-y: scroll; */
   overflow-x: hidden;
   scrollbar-color: rgb(255, 0, 0) rgb(255, 173, 173);
   scrollbar-gutter: stable both-edges;
@@ -74,6 +77,8 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
   flex-wrap: wrap;
   margin: 1rem;
   padding: 1rem;
+  max-height: 34vh;
+
 }
 
 .movesList {
@@ -83,11 +88,12 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
   flex-wrap: wrap;
 }
 
-.movesList li{
+.movesList li {
   flex-basis: calc(33.33% - 10px);
   margin-right: 10px;
   margin-bottom: 10px;
 }
+
 .titleMoves {
   width: 100%;
   padding-bottom: 1rem;

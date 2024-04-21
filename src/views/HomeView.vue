@@ -5,17 +5,24 @@ import PokemonCard from "../components/PokemonCard.vue";
 
 let pokemons = reactive(ref());
 let urlBaseSvg = ref("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/");
-let urlBaseType = ref("https://pokeapi.co/api/v2/type/")
 let searchPokemon = ref("");
 let pokemonSelected = reactive(ref());
 let loading = ref(false);
+let urlBaseEvolution = ref("https://pokeapi.co/api/v2/evolution-chain/");
 
 
 onMounted(() => {
   fetch("https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0")
     .then(res => res.json())
     .then(res => pokemons.value = res.results);
-});
+})
+
+// onMounted(() => {
+//   fetch(`https://pokeapi.co/api/v2/evolution-chain/${pokemonSelected.id}`)
+//     .then(res => res.json())
+//     .then(res => pokemonsEvolution.value = res.results);
+// })
+// ;
 
 const pokemonsFilter = computed(()=>{
   if(pokemons.value && searchPokemon.value){
@@ -48,11 +55,14 @@ const selectPokemon = async (pokemon)=>{
           :xp="pokemonSelected?.base_experience"
           :height="pokemonSelected?.height"
           :image = "pokemonSelected?.sprites.other.dream_world.front_default"
-          :weight:="pokemonSelected?.weight"
+          :weight="pokemonSelected?.weight"
           :loading="loading"
           :type1="pokemonSelected?.types[0].type.name"
-          :type2="pokemonSelected?.types[1].type.name"
+          :type2="pokemonSelected?.types[1]?.type.name"
           :moves="pokemonSelected?.moves"
+          :id="pokemonSelected?.id"
+          :evolution="pokemonSelected"
+          
           />
         </div>
 
@@ -64,7 +74,7 @@ const selectPokemon = async (pokemon)=>{
                   Pesquisar Pokemon.
                 </label>
 
-                <input v-model="searchPokemon" type="text" class="form-control" id="searchPokemon"
+                <input v-model="searchPokemon" type="text" class="form-control mt-2" id="searchPokemon"
                   placeholder="Who's that Pokemon? (Pesquisar Pokemon)">
               </div>
 
@@ -89,4 +99,5 @@ const selectPokemon = async (pokemon)=>{
   scrollbar-gutter: stable both-edges;
   scrollbar-width: thin;
 }
+
 </style>
