@@ -7,9 +7,10 @@ let pokemons = reactive(ref());
 let urlBaseSvg = ref("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/");
 let searchPokemon = ref("");
 let pokemonSelected = reactive(ref());
+let loading = ref(false)
 
 onMounted(() => {
-  fetch("https://pokeapi.co/api/v2/pokemon?limit=100&offset=0")
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0")
     .then(res => res.json())
     .then(res => pokemons.value = res.results);
 });
@@ -23,9 +24,13 @@ const pokemonsFilter = computed(()=>{
 });
 
 const selectPokemon = async (pokemon)=>{
+  loading.value = true;
   await fetch(pokemon.url)
   .then(res => res.json())
-  .then(res => pokemonSelected.value = res);
+  .then(res => pokemonSelected.value = res)
+  .catch(err => alert(err))
+  .finally(()=> loading.value = false)
+
   console.log(pokemonSelected.value);
 };
 
@@ -39,8 +44,9 @@ const selectPokemon = async (pokemon)=>{
           <PokemonCard
           :name="pokemonSelected?.name"
           :xp="pokemonSelected?.base_experience"
-          :height="(pokemonSelected?.height *2.54).toFixed(2)"
+          :height="pokemonSelected?.height"
           :image = "pokemonSelected?.sprites.other.dream_world.front_default"
+          :loading="loading"
           />
         </div>
 
@@ -70,8 +76,11 @@ const selectPokemon = async (pokemon)=>{
 
 <style scoped>
 .list{
-  max-height: 65rem;
+  max-height: 85vh;
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-color: rgb(255, 0, 0) rgb(255, 173, 173);
+  scrollbar-gutter: stable both-edges;
+  scrollbar-width: thin;
 }
 </style>
