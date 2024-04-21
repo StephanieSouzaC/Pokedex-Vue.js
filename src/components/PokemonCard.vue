@@ -1,5 +1,5 @@
 <script setup>
-const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1", "type2", "weight"]);
+const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1", "type2", "weight", "moves"]);
 
 </script>
 
@@ -19,16 +19,21 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
           </div>
         </div>
         <section class="col">
-          <strong>XP: </strong>
-          <span>{{ pokemon.xp }}</span>
-        </section>
-        <section class="col">
           <strong>Altura : </strong>
           <span>{{ pokemon.height }}</span>
           <hr>
           <strong>Peso: </strong>
           <span>{{ pokemon.weight }}</span>
+          <hr>
+        <strong>XP: </strong>
+          <span>{{ pokemon.xp }}</span>
         </section>
+      <div class="moves">
+        <strong class="titleMoves">Movimentos de Ataque: </strong>  
+        <ul class="movesList">
+            <li v-for="move in moves" :key="move.move.name">{{ move.move.name }}</li>
+          </ul>
+      </div>
       </div>
     </div>
   </div>
@@ -36,6 +41,8 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
     <img src="../assets/images/pokeball.png" class="card-img-top p-5" alt='Who is that pokemon?'>
     <h5 class="card-title text-center">{{ pokemon.name || "Who is that pokemon?" }}</h5>
   </div>
+  
+  
 </template>
 
 <style>
@@ -60,5 +67,29 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
   border-radius: 16px;
   display: flex;
   justify-content: center;
+}
+
+.moves {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.movesList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movesList li{
+  flex-basis: calc(33.33% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.titleMoves {
+  width: 100%;
+  padding-bottom: 1rem;
 }
 </style>

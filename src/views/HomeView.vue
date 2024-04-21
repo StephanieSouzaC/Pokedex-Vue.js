@@ -9,7 +9,7 @@ let urlBaseType = ref("https://pokeapi.co/api/v2/type/")
 let searchPokemon = ref("");
 let pokemonSelected = reactive(ref());
 let loading = ref(false);
-let i = 0;
+
 
 onMounted(() => {
   fetch("https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0")
@@ -48,10 +48,11 @@ const selectPokemon = async (pokemon)=>{
           :xp="pokemonSelected?.base_experience"
           :height="pokemonSelected?.height"
           :image = "pokemonSelected?.sprites.other.dream_world.front_default"
+          :weight:="pokemonSelected?.weight"
           :loading="loading"
           :type1="pokemonSelected?.types[0].type.name"
           :type2="pokemonSelected?.types[1].type.name"
-          :weight:="pokemonSelected?.weight"
+          :moves="pokemonSelected?.moves"
           />
         </div>
 
