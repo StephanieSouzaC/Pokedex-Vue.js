@@ -60,28 +60,7 @@ Uma Pokedex clássica, criada como parte de um desafio para aprimorar minhas hab
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [Vercel](https://vercel.com/docs)
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Desenvolvedora :octocat:
+| [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Stephanie_Souza</sub>](https://www.linkedin.com/in/stephanie-souza-83a18b239/) |
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
