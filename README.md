@@ -17,15 +17,17 @@
 
 ### Tópicos 
 
-:small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
+:small_blue_diamond: [Descrição do Projeto](#descrição-do-projeto)
 
 :small_blue_diamond: [Funcionalidades](#funcionalidades)
 
-:small_blue_diamond: [Deploy da Aplicação](#deploy-da-aplicação-dash)
+:small_blue_diamond: [Deploy da Aplicação](#deploy-da-aplicação)
 
-:small_blue_diamond: [Pré-requisitos](#pré-requisitos)
+:small_blue_diamond: [Layout da Aplicação](#layout-da-aplicação)
 
-:small_blue_diamond: [Como rodar a aplicação](#Linguagens,-dependencias-e-libs-utilizadas)
+:small_blue_diamond: [Linguagens, dependencias e libs utilizadas](#Linguagens,-dependencias-e-libs-utilizadas)
+
+:small_blue_diamond: [Desenvolvedora](#desenvolvedora)
 
 ## Descrição do projeto 
 
@@ -41,9 +43,9 @@ Uma Pokedex clássica, criada como parte de um desafio para aprimorar minhas hab
 
 :heavy_check_mark: No card possui nome, altura, peso, xp e tipos de pokemon, além de todos os movimentos de ataque.
 
-## Deploy da Aplicação :dash:
+## Deploy da Aplicação :computer:
 
-> Link do deploy da aplicação: XXX
+> Link do deploy da aplicação: [Pokedex](https://pokedex-stephanie-souza.vercel.app/)
 
 ## Layout da Aplicação :dash:
 >aqui vão algumas imagens e gifs da aplicação.
@@ -62,5 +64,5 @@ Uma Pokedex clássica, criada como parte de um desafio para aprimorar minhas hab
 
 
 ## Desenvolvedora :octocat:
-| [<img src="./src/assets/images/ImagemStephanie.jpeg" width=100><br><sub>Stephanie_Souza</sub>](https://www.linkedin.com/in/stephanie-souza-83a18b239/) |
+[<img src="./src/assets/images/ImagemStephanie.jpeg" width=100><br><sub>Stephanie_Souza</sub>](https://www.linkedin.com/in/stephanie-souza-83a18b239/)
 
