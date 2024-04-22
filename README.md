@@ -21,13 +21,13 @@
 
 :small_blue_diamond: [Funcionalidades](#funcionalidades)
 
-:small_blue_diamond: [Deploy da Aplicação](#deploy-da-aplicação)
+:small_blue_diamond: [Deploy da Aplicação](#deploy-da-aplicação-computer)
 
-:small_blue_diamond: [Layout da Aplicação](#layout-da-aplicação)
+:small_blue_diamond: [Layout da Aplicação](#layout-da-aplicação-dash)
 
-:small_blue_diamond: [Linguagens, dependencias e libs utilizadas](#Linguagens,-dependencias-e-libs-utilizadas)
+:small_blue_diamond: [Linguagens, dependencias e libs utilizadas](#linguagens-dependencias-e-libs-utilizadas-books)
 
-:small_blue_diamond: [Desenvolvedora](#desenvolvedora)
+:small_blue_diamond: [Desenvolvedora](#desenvolvedora-octocat)
 
 ## Descrição do projeto 
 
