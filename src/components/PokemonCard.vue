@@ -1,5 +1,5 @@
 <script setup>
-const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1", "type2", "weight", "moves", "id","evolution", "evolutionName"]);
+const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1", "type2", "weight", "moves", "id", "evolution", "evolutionName"]);
 
 // const rotate = document.querySelector('pokeball');
 // rotate.classList.add('animate__animated', 'animate__rotateIn');
@@ -12,11 +12,11 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
 <template>
   <div class="card CardPokemonSelected" :class="loading ? '' : 'animate__animated animate__flipInY'"
     v-if="pokemon.name">
-    <div class="img-card d-flex justify-content-center">
-      <img :src="pokemon.image" class="card-img p-5 w-50 h-50" :alt="pokemon.name">
-      </div>
-      <h5 class="card-title text-center">{{ pokemon.name }}</h5>
-      <div class="card-Pokemon-selected">
+    <div class="img-card d-flex justify-content-center w-100 h-100">
+      <img :src="pokemon.image" class="card-img p-5" :alt="pokemon.name">
+    </div>
+    <h5 class="card-title text-center">{{ pokemon.name }}</h5>
+    <div class="card-Pokemon-selected">
       <hr>
       <div class="row">
         <div class="col">
@@ -26,15 +26,17 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
             <v-card class="type" id="type2" v-if="pokemon.type2"> {{ pokemon.type2 }}</v-card>
           </div>
         </div>
-          <section class="col">
-            <strong>Altura : </strong>
-            <span>{{ pokemon.height }}</span>
-            <hr>
-            <strong>Peso: </strong>
-            <span>{{ pokemon.weight }}</span>
-            <hr>
-          </section>
-          <!-- <section>
+        <section class="col">
+          <strong>Altura : </strong>
+          <span>{{ pokemon.height }}</span>
+          <hr>
+          <strong>Peso: </strong>
+          <span>{{ pokemon.weight }}</span>
+          <hr>
+          <strong>XP: </strong>
+          <span>{{ pokemon.xp }}</span>
+        </section>
+        <!-- <section>
             <strong>Evolução: </strong>
             <img :src="pokemon.evolutionName">
             <span>{{ pokemon.evolution}}</span>
@@ -49,9 +51,10 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
       </div>
     </div>
   </div>
-  <div v-else class="card-not-select p-5 w-100 h-75">
-    <img src="../assets/images/pokeball.png" class="card-img-top poke-animation p-5" id="pokeball" alt='Who is that pokemon?'>
-    <h5 class="card-title-no-Selected text-center">Who is that pokemon?"</h5>
+  <div v-else class="card-not-select p-5 w-100 h-75 text-center">
+    <img src="../assets/images/pokeball.png" class="card-img-top poke-animation p-5 w-75 " id="pokeball"
+      alt='Who is that pokemon?'>
+    <h5 class="card-title-no-Selected text-center">Who is that pokemon?</h5>
   </div>
 
 
@@ -64,6 +67,11 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
   scrollbar-color: rgb(255, 0, 0) rgb(255, 173, 173);
   scrollbar-gutter: stable both-edges;
   scrollbar-width: thin;
+}
+
+.card-img{
+  width: 300px;
+  height: 300px;
 }
 
 .col {
@@ -106,16 +114,21 @@ const pokemon = defineProps(["name", "xp", "height", "image", "loading", "type1"
   padding-bottom: 1rem;
 }
 
-.poke-animation{
+.poke-animation {
   animation: captured 1s infinite alternate;
 }
 
 @keyframes captured {
-  from {rotate: 0deg;}
-  to {rotate: 30deg;}
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 30deg;
+  }
 }
 
-.card-title-no-Selected  {
+.card-title-no-Selected {
   font-family: 'Pokemon Solid', sans-serif;
   font-size: 2.5rem;
 }
