@@ -25,7 +25,7 @@
 
 :small_blue_diamond: [Deploy da Aplicação](#deploy-da-aplicação-computer)
 
-:small_blue_diamond: [Layout da Aplicação](#layout-da-aplicação-dash)
+:small_blue_diamond: [Layout da Aplicação](#layout-da-aplicação-computer)
 
 :small_blue_diamond: [Linguagens, dependencias e libs utilizadas](#linguagens-dependencias-e-libs-utilizadas-books)
 
@@ -49,7 +49,7 @@ Uma Pokedex clássica, criada como parte de um desafio para aprimorar minhas hab
 
 > Link do deploy da aplicação: [Pokedex](https://pokedex-stephanie-souza.vercel.app/)
 
-## Layout da Aplicação :dash:
+## Layout da Aplicação :computer:
 > Página inicial
 <img src="./src/assets/images/page.jpg" width=1000>
 
@@ -73,5 +73,6 @@ Uma Pokedex clássica, criada como parte de um desafio para aprimorar minhas hab
 
 
 ## Desenvolvedora :octocat:
+
 [<img src="./src/assets/images/ImagemStephanie.jpeg" width=100><br><sub>Stephanie Souza</sub>](https://www.linkedin.com/in/stephanie-souza-83a18b239/)
 
