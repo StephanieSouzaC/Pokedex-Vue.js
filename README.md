@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/static/v1?label=Vercel&message=deploy&color=black&style=for-the-badge&logo=Vercel"/>
   <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
   <img src="http://img.shields.io/static/v1?label=JavaScript&message=ES6&color=yellow&style=for-the-badge&logo=JavaScript"/>
-  <img src="http://img.shields.io/static/v1?label=Vite&message=Server&color=yellow&style=for-the-badge&logo=Vite"/>
+  <img src="http://img.shields.io/static/v1?label=Vite&message=Server&color=purple&style=for-the-badge&logo=Vite"/>
   <img src="http://img.shields.io/static/v1?label=PokeAPI&message=API&color=red&style=for-the-badge&logo=PokeApi"/>
   <img src="http://img.shields.io/static/v1?label=HTML&message=5&color=red&style=for-the-badge&logo=HTML5"/>
   <img src="http://img.shields.io/static/v1?label=CSS&message=3&color=blue&style=for-the-badge&logo=CSS3"/>
