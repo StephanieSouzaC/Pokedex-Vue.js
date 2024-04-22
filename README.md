@@ -62,5 +62,5 @@ Uma Pokedex clássica, criada como parte de um desafio para aprimorar minhas hab
 
 
 ## Desenvolvedora :octocat:
-| [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Stephanie_Souza</sub>](https://www.linkedin.com/in/stephanie-souza-83a18b239/) |
+| [<img src="./src/assets/images/ImagemStephanie.jpeg" width=115><br><sub>Stephanie_Souza</sub>](https://www.linkedin.com/in/stephanie-souza-83a18b239/) |
 
