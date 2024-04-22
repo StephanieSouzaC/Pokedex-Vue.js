@@ -25,7 +25,7 @@
 
 :small_blue_diamond: [Pré-requisitos](#pré-requisitos)
 
-:small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
+:small_blue_diamond: [Como rodar a aplicação](#Linguagens,-dependencias-e-libs-utilizadas)
 
 ## Descrição do projeto 
 
@@ -62,5 +62,5 @@ Uma Pokedex clássica, criada como parte de um desafio para aprimorar minhas hab
 
 
 ## Desenvolvedora :octocat:
-| [<img src="./src/assets/images/ImagemStephanie.jpeg" width=115><br><sub>Stephanie_Souza</sub>](https://www.linkedin.com/in/stephanie-souza-83a18b239/) |
+| [<img src="./src/assets/images/ImagemStephanie.jpeg" width=100><br><sub>Stephanie_Souza</sub>](https://www.linkedin.com/in/stephanie-souza-83a18b239/) |
 
