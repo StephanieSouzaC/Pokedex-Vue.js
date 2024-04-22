@@ -1,4 +1,6 @@
-<h1 font-family="pokemon-solid">Pokedex</h1>
+<h1 aling="center">
+<img src="./src/assets/images/pikachu.png" width=100>Pokedex</h1>
+
 
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=vue.js&message=framework&color=green&style=for-the-badge&logo=vue.js"/>
@@ -48,7 +50,14 @@ Uma Pokedex clássica, criada como parte de um desafio para aprimorar minhas hab
 > Link do deploy da aplicação: [Pokedex](https://pokedex-stephanie-souza.vercel.app/)
 
 ## Layout da Aplicação :dash:
->aqui vão algumas imagens e gifs da aplicação.
+> Página inicial
+<img src="./src/assets/images/page.jpg" width=1000>
+
+> Página de Pesquisa
+<img src="./src/assets/images/selected.jpg" width=1000>
+
+> Responsividade e Card do Pokemon
+<img src="./src/assets/images/responsivo.jpg" width=500>
 
 ## Linguagens, dependencias e libs utilizadas :books:
 
@@ -64,5 +73,5 @@ Uma Pokedex clássica, criada como parte de um desafio para aprimorar minhas hab
 
 
 ## Desenvolvedora :octocat:
-[<img src="./src/assets/images/ImagemStephanie.jpeg" width=100><br><sub>Stephanie_Souza</sub>](https://www.linkedin.com/in/stephanie-souza-83a18b239/)
+[<img src="./src/assets/images/ImagemStephanie.jpeg" width=100><br><sub>Stephanie Souza</sub>](https://www.linkedin.com/in/stephanie-souza-83a18b239/)
 
