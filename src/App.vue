@@ -49,7 +49,6 @@ let num = ref(0)
 
 <style>
 footer{
-  position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
