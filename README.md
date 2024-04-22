@@ -1,7 +1,14 @@
 <h1 font-family="pokemon-solid">Pokedex</h1>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=vue.js&message=framework&color=green&style=for-the-badge&logo=vue.js"/>
+  <img src="https://img.shields.io/static/v1?label=Vercel&message=deploy&color=red&style=for-the-badge&logo=Vercel"/>
+  <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
+  <img src="http://img.shields.io/static/v1?label=JavaScript&message=ES6&color=yellow&style=for-the-badge&logo=JavaScript"/>
+  <img src="http://img.shields.io/static/v1?label=HTML&message=5&color=red&style=for-the-badge&logo=HTML5"/>
+  <img src="http://img.shields.io/static/v1?label=CSS&message=3&color=blue&style=for-the-badge&logo=CSS3"/>
+   <img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=green&style=for-the-badge"/>
+</p>
 
 This template should help get you started developing with Vue 3 in Vite.
 
